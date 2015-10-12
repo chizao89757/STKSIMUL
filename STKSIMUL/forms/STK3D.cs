@@ -12,7 +12,23 @@ namespace STKSIMUL
 {
     public partial class STK3D : Form
     {
-        public STK3D()
+        private static STK3D defSTK3D;
+
+        /// <summary>
+        /// 将默认的构造函数私有化
+        /// 实现单例模式
+        /// </summary>
+        /// <returns></returns>
+        public static STK3D createform()
+        {
+            if ((defSTK3D == null) || (defSTK3D.IsDisposed == true))
+            {
+                defSTK3D = new STK3D();
+            }
+            return defSTK3D;
+
+        }
+        private STK3D()
         {
             InitializeComponent();
         }

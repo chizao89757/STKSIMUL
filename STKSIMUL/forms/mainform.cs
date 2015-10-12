@@ -16,15 +16,51 @@ namespace STKSIMUL
 {
     public partial class mainform : Form
     {
+        #region 杂
+
+        private string scfilepathstr = null;
+
+
         public mainform()
         {
             InitializeComponent();
         }
 
+        enum menustate
+        {
+            no_open_file = 0,
+            edit_file = 1,
+            start_demo = 2,
+
+        }
+        /// <summary>
+        /// 根据软件状态更改菜单栏各项属性
+        /// </summary>
+        /// <param name="state"></param>
+        private void menustatechange(menustate state)
+        {
+            switch (state)
+            {
+                case menustate.no_open_file:
+
+                    break;
+                case menustate.edit_file:
+
+                    break;
+                case menustate.start_demo:
+
+                    break;
+                default:
+
+                    break;
+            }
+        }
+
+        #endregion
 
 
 
-
+        #region 菜单栏
 
 
         #region 文件
@@ -35,6 +71,20 @@ namespace STKSIMUL
 
         private void 打开OToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = Application.StartupPath;
+            openFileDialog1.Filter = "scenario files (*.sc)|*.sc|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.Multiselect = false;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                scfilepathstr = openFileDialog1.FileName;
+                
+
+            }
+
 
         }
 
@@ -52,18 +102,24 @@ namespace STKSIMUL
         {
 
         }
+
+
+
+
         #endregion
 
         #region 编辑
         private void 建立模型ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            staticpara newmodeform = new staticpara();
+            staticpara newmodeform = staticpara.createform();
+            
             newmodeform.ShowDialog();
         }
 
         private void 参数修改ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            staticpara setparaform = new staticpara();
+            staticpara setparaform = staticpara.createform();
+            
             setparaform.ShowDialog();
         }
         #endregion
@@ -80,7 +136,7 @@ namespace STKSIMUL
         /// <param name="e"></param>
         private void dToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            STK2D STK2Dform = new STK2D();
+            STK2D STK2Dform = STK2D.createform();
             STK2Dform.Show();
         }
         /// <summary>
@@ -90,7 +146,7 @@ namespace STKSIMUL
         /// <param name="e"></param>
         private void dToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            STK3D STK3Dform = new STK3D();
+            STK3D STK3Dform = STK3D.createform();
             STK3Dform.Show();
         }
         private void sIMULATIONToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,7 +168,7 @@ namespace STKSIMUL
         }
         #endregion
 
-
+        #endregion
 
     }
 }

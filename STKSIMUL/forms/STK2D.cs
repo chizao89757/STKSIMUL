@@ -12,7 +12,23 @@ namespace STKSIMUL
 {
     public partial class STK2D : Form
     {
-        public STK2D()
+        private static STK2D defSTK2D;
+
+        /// <summary>
+        /// 将默认的构造函数私有化
+        /// 实现单例模式
+        /// </summary>
+        /// <returns></returns>
+        public static STK2D createform()
+        {
+            if ((defSTK2D == null) || (defSTK2D.IsDisposed == true))
+            {
+                defSTK2D = new STK2D();
+            }
+            return defSTK2D;
+        }
+
+        private STK2D()
         {
             InitializeComponent();
         }
