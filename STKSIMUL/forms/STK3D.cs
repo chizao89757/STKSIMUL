@@ -31,6 +31,7 @@ namespace STKSIMUL
         private STK3D()
         {
             InitializeComponent();
+          
         }
 
         private void axAgUiAxVOCntrl1_OLEDragDrop(object sender, AxAGI.STKX.IAgUiAxVOCntrlEvents_OLEDragDropEvent e)

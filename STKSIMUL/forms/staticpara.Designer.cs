@@ -70,7 +70,7 @@
             this.ClientSize = new System.Drawing.Size(627, 496);
             this.Controls.Add(this.treeView1);
             this.Name = "staticpara";
-            this.Text = "staraparaform";
+            this.Text = "参数设置";
             this.ResumeLayout(false);
 
         }
