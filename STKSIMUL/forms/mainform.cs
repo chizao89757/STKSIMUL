@@ -11,7 +11,6 @@ using System.IO;
 using System.Collections;
 using System.Diagnostics;
 
-
 namespace STKSIMUL
 {
     public partial class mainform : Form
@@ -66,7 +65,7 @@ namespace STKSIMUL
         #region 文件
         private void 新建NToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void 打开OToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,7 +99,7 @@ namespace STKSIMUL
 
         private void 退出XToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
 
@@ -112,15 +111,17 @@ namespace STKSIMUL
         private void 建立模型ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             staticpara newmodeform = staticpara.createform();
-            
-            newmodeform.ShowDialog();
+            newmodeform.MdiParent = this;
+
+            newmodeform.Show();
         }
 
         private void 参数修改ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             staticpara setparaform = staticpara.createform();
-            
-            setparaform.ShowDialog();
+            setparaform.MdiParent = this;
+
+            setparaform.Show();
         }
         #endregion
 

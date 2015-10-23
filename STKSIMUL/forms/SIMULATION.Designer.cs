@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 378);
             this.Name = "SIMULATION";
-            this.Text = "SIMULATION";
+            this.Text = "仿真视图窗口";
             this.ResumeLayout(false);
 
         }

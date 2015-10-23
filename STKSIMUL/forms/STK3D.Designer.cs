@@ -50,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(673, 458);
             this.Controls.Add(this.axAgUiAxVOCntrl1);
             this.Name = "STK3D";
-            this.Text = "STK3D";
+            this.Text = "3D视图窗口";
             ((System.ComponentModel.ISupportInitialize)(this.axAgUiAxVOCntrl1)).EndInit();
             this.ResumeLayout(false);
 

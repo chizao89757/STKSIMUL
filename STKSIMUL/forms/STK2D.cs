@@ -24,6 +24,7 @@ namespace STKSIMUL
             if ((defSTK2D == null) || (defSTK2D.IsDisposed == true))
             {
                 defSTK2D = new STK2D();
+
             }
             return defSTK2D;
         }
@@ -31,6 +32,7 @@ namespace STKSIMUL
         private STK2D()
         {
             InitializeComponent();
+            //this.axAgUiAx2DCntrl1.Application.ExecuteCommand("New / Scenario Test"); 
         }
 
     }

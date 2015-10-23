@@ -50,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(699, 446);
             this.Controls.Add(this.axAgUiAx2DCntrl1);
             this.Name = "STK2D";
-            this.Text = "STK2D";
+            this.Text = "2D视图窗口";
             ((System.ComponentModel.ISupportInitialize)(this.axAgUiAx2DCntrl1)).EndInit();
             this.ResumeLayout(false);
 
