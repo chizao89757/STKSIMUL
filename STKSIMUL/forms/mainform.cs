@@ -66,6 +66,10 @@ namespace STKSIMUL
         private void 新建NToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+
+
+
+
         }
 
         private void 打开OToolStripMenuItem_Click(object sender, EventArgs e)
